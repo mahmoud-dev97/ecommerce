@@ -1,0 +1,260 @@
+:root {
+  --firstcolor: hsl(26, 100%, 55%);
+  --seccolor: hsl(25, 100%, 94%);
+}
+body {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 16px;
+}
+.btn:focus {
+  box-shadow: none;
+}
+/* start navbar */
+nav.navbar {
+  height: 100px;
+  border-bottom: solid #eee 1px;
+}
+.offcanvas-body li {
+  position: relative;
+}
+
+.offcanvas-body a:hover::after {
+  position: absolute;
+  content: "";
+  height: 3px;
+  width: 100%;
+  bottom: -30px;
+  left: 0;
+  background-color: var(--firstcolor);
+}
+.avatar {
+  width: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.avatar:hover {
+  border: 2px solid var(--firstcolor);
+}
+.offcanvas-start {
+  width: 200px;
+}
+.dropdown-menu.show {
+  width: 300px;
+  height: 200px;
+  margin-top: 10px;
+}
+.dropdown-menu[data-bs-popper] {
+  right: 0;
+  left: unset;
+}
+/* end navbar */
+.row .ps-5 {
+  padding-left: 8rem !important;
+}
+.parent img {
+  width: 400px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.row ul {
+  margin-top: 30px;
+  width: 400px;
+  justify-content: space-between;
+}
+.row ul img,
+.modal-footer ul img {
+  width: 90px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: ease 0.2s;
+}
+.row ul img.active {
+  border: 3px solid var(--firstcolor);
+  opacity: 0.6;
+}
+.row ul img:hover,
+.modal-footer ul img:hover {
+  opacity: 0.6;
+}
+.row .info h6 {
+  color: var(--firstcolor);
+  font-weight: 700;
+  font-size: 12px;
+}
+.row .info h1 {
+  font-weight: 700;
+  color: hsl(220, 13%, 13%);
+}
+.row .info p {
+  font-weight: 700;
+  color: hsl(219, 9%, 45%);
+  max-width: 400px;
+  margin: 25px 0;
+}
+.row .info h3 {
+  font-weight: 700;
+  color: hsl(220, 13%, 13%);
+  margin-bottom: 25px;
+}
+.row .info h3 .badge {
+  background-color: var(--seccolor);
+  color: var(--firstcolor);
+}
+.row .info h3 .oldprice {
+  color: hsl(219, 9%, 45%);
+  font-size: 15px;
+  text-decoration-line: line-through;
+}
+
+/* dropdown */
+.position-relative .position-absolute {
+  background-color: var(--firstcolor);
+  left: 20px;
+}
+.out {
+  margin-bottom: 20px;
+  padding: 10px;
+  align-items: center;
+  justify-content: space-between;
+}
+.out .title {
+  font-size: 13px;
+  color: hsl(219, 9%, 45%);
+}
+.out .cal {
+  font-size: 13px;
+  color: hsl(219, 9%, 45%);
+}
+.out .total {
+  color: black;
+  margin-left: 5px;
+  font-weight: 700;
+}
+.out .prod {
+  width: 50px;
+  margin-right: 15px;
+  border-radius: 5px;
+}
+.dropdown-menu .add {
+  width: 94%;
+  margin: 0 10px;
+}
+/* dropdown */
+
+.btn-group {
+  background-color: hsl(223, 64%, 98%);
+}
+.disabled {
+  width: 50px;
+}
+.add {
+  background-color: var(--firstcolor);
+  color: white;
+  padding: 10px 60px;
+  border-radius: 10px;
+  border: none;
+  font-weight: 700;
+  transition: ease 0.4s;
+}
+.add:hover {
+  background-color: hsla(26, 100%, 55%, 75%);
+}
+
+/* modal */
+.modal-content {
+  background-color: unset;
+  border: unset;
+}
+.modal-content img {
+  border-radius: 10px;
+}
+.modal-footer ul img.active {
+  filter: opacity(80%);
+  background-color: white;
+  border: 3px solid var(--firstcolor);
+}
+.modal-header {
+  border: unset;
+  padding-bottom: unset;
+}
+.modal-header .btn {
+  padding: 0;
+}
+.modal-header .btn i:hover {
+  transition: ease 0.3s;
+  color: var(--firstcolor) !important;
+}
+.modal-footer {
+  border: unset;
+  display: unset;
+}
+.modal-footer ul {
+  justify-content: space-evenly !important;
+}
+
+/* media */
+@media (max-width: 992px) {
+  nav.navbar {
+    border-bottom: unset;
+  }
+  .row {
+    justify-content: center !important;
+    align-content: center !important;
+  }
+  .row .ps-5 {
+    margin: 0 !important;
+    width: 400px;
+    padding: 0 !important;
+  }
+  .row .pe-5 {
+    max-width: 400px;
+    margin-top: 30px;
+    padding: unset !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .parent img {
+    border-radius: 0;
+  }
+  .row .info h3 br {
+    display: none;
+  }
+  .row .oldprice {
+    margin-left: 110px;
+  }
+  .row .ps-5 {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  .row .pe-5 {
+    padding: 20px !important;
+    margin: unset !important;
+  }
+  .row .navbar-nav {
+    display: none;
+  }
+  .row .btn-group {
+    width: 100%;
+    margin: 0 !important;
+  }
+  .row .add {
+    width: 100%;
+    margin-top: 10px;
+  }
+  .dropdown-menu.show {
+    width: 350px;
+    height: 220px;
+    margin-top: 35px;
+  }
+  .dropdown-menu[data-bs-popper] {
+    right: -10px;
+    left: unset;
+  }
+  .parent {
+    position: relative;
+  }
+  .parent i {
+    display: unset !important;
+  }
+}
