@@ -8,8 +8,8 @@ let num = document.querySelector(".disabled");
 let minusBtn = document.querySelector(".minus");
 let addCart = document.querySelector(".pe-5 .add");
 // right and left btns
-let right = document.querySelector(".row .fa-circle-chevron-right");
-let left = document.querySelector(".row .fa-circle-chevron-left");
+let right = document.querySelector(".fa-circle-chevron-right");
+let left = document.querySelector(".fa-circle-chevron-left");
 let rightModal = document.querySelector(".modal-body .fa-circle-chevron-right");
 let leftModal = document.querySelector(".modal-body .fa-circle-chevron-left");
 
@@ -45,6 +45,7 @@ minusBtn.addEventListener("click", () => {
     num.innerHTML = +num.innerHTML - 1;
   }
 });
+
 addCart.addEventListener("click", () => {
   if (+num.innerHTML > 0) {
     let total = +num.innerHTML * 125;
