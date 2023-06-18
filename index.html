@@ -128,12 +128,14 @@
           <div class="images">
             <div class="parent">
               <i
+                onclick="rightRow()"
                 style="cursor: pointer"
-                class="d-none fa-solid fa-circle-chevron-right fs-1 text-white position-absolute end-0 bottom-50"
+                class="d-block fa-solid fa-circle-chevron-right fs-1 text-white position-absolute end-0 bottom-50"
               ></i>
               <i
+                onclick="leftRow()"
                 style="cursor: pointer"
-                class="d-none fa-solid fa-circle-chevron-left fs-1 text-white position-absolute start-0 bottom-50"
+                class="d-block fa-solid fa-circle-chevron-left fs-1 text-white position-absolute start-0 bottom-50"
               ></i>
               <img
                 data-bs-toggle="modal"
@@ -239,10 +241,12 @@
           </div>
           <div class="modal-body">
             <i
+              onclick="rightModal()"
               style="cursor: pointer"
               class="fa-solid fa-circle-chevron-right fs-1 text-white position-absolute bottom-50 end-0"
             ></i>
             <i
+              onclick="leftModal()"
               style="cursor: pointer"
               class="fa-solid fa-circle-chevron-left fs-1 text-white position-absolute bottom-50 start-0"
             ></i>

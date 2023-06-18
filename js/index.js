@@ -7,11 +7,6 @@ let plusBtn = document.querySelector(".plus");
 let num = document.querySelector(".disabled");
 let minusBtn = document.querySelector(".minus");
 let addCart = document.querySelector(".pe-5 .add");
-// right and left btns
-let right = document.querySelector(".fa-circle-chevron-right");
-let left = document.querySelector(".fa-circle-chevron-left");
-let rightModal = document.querySelector(".modal-body .fa-circle-chevron-right");
-let leftModal = document.querySelector(".modal-body .fa-circle-chevron-left");
 
 // li sec var
 let out = document.querySelector(".out");
@@ -58,8 +53,8 @@ addCart.addEventListener("click", () => {
     badge.innerHTML = +num.innerHTML;
   }
 });
-
-right.addEventListener("click", () => {
+// btns
+const rightRow = () => {
   if (index < imgs.length - 1) {
     index++;
   } else {
@@ -70,8 +65,8 @@ right.addEventListener("click", () => {
     imgs[index].classList.add("active");
     bigImg.src = imgs[index].src;
   });
-});
-left.addEventListener("click", () => {
+};
+const lefttRow = () => {
   if (index > 0) {
     index--;
   } else {
@@ -82,8 +77,8 @@ left.addEventListener("click", () => {
     imgs[index].classList.add("active");
     bigImg.src = imgs[index].src;
   });
-});
-rightModal.addEventListener("click", () => {
+};
+const rightModal = () => {
   if (index < imgsModal.length - 1) {
     index++;
   } else {
@@ -94,8 +89,8 @@ rightModal.addEventListener("click", () => {
     imgsModal[index].classList.add("active");
     mainImgModal.src = imgsModal[index].src;
   });
-});
-leftModal.addEventListener("click", () => {
+};
+const leftModal = () => {
   if (index > 0) {
     index--;
   } else {
@@ -106,7 +101,7 @@ leftModal.addEventListener("click", () => {
     imgsModal[index].classList.add("active");
     mainImgModal.src = imgsModal[index].src;
   });
-});
+};
 
 window.addEventListener("resize", () => {
   if (window.matchMedia("(max-width: 768px)").matches) {
